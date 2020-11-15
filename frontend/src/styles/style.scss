@@ -1,0 +1,38 @@
+
+body{
+    margin: 0px;
+    background-image: url("../../img/pexels-roberto-shumski-1903702.jpg");
+    background-size: cover;
+    font-family: 'Alegreya';
+}
+
+#menu{
+    left: 0;
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    overflow-y: auto;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#content-wrapper{
+    position: fixed;
+    right: 0;
+    width: 85%;
+    height: 100%;
+    overflow-y:scroll;
+}
+
+#content {
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.split{
+    float: left;
+    width: 50%;
+}
+ul ul { display: none }
+ul li:hover ul { display: block; }
