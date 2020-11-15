@@ -126,7 +126,7 @@ window.addEventListener("load", () => {
                     content.appendChild(text);
                 }else if (obj.elem[i].type == "img"){
                     let img = document.createElement("img");
-                    img.src =  document.URL.split("1234")[0] + "8000/assets/img/" + obj.elem[i].name;
+                    img.src = document.URL.split("1234")[0] + "8000/assets/img/" + obj.elem[i].name;
                     img.style.width = "100%";
                     content.appendChild(img);
                 }else if (obj.elem[i].type == "split"){
@@ -142,7 +142,7 @@ window.addEventListener("load", () => {
                         left.appendChild(text);
                     }else if (obj.elem[i].left.type == "img"){
                         let img = document.createElement("img");
-                        img.src =  document.URL.split("1234")[0] + "8000/assets/img/" + obj.elem[i].left.name;
+                        img.src = document.URL.split("1234")[0] + "8000/assets/img/" + obj.elem[i].left.name;
                         img.style.width = "100%";
                         left.appendChild(img);
                     }
