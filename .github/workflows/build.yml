@@ -22,7 +22,7 @@ jobs:
           FOLDER: frontend/dist
           CLEAN: true
   build-backend:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
