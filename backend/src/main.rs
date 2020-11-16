@@ -1,78 +1,109 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
-use std::{fs::File, io::Read, path::Path, fs};
+#[macro_use]
+extern crate rocket;
+#[macro_use]
+extern crate rocket_contrib;
 
-use rocket::http::Method;
-use rocket::{response::{NamedFile, content}};
-use rocket_cors::AllowedOrigins;
-use rocket_cors::{AllowedHeaders, Error};
-
-#[macro_use] extern crate rocket;
-extern crate rocket_cors;
+use rocket::{
+    http::{Method, Status},
+    response::NamedFile,
+};
+use rocket_contrib::json::JsonValue;
+use rocket_cors::{AllowedHeaders, AllowedOrigins};
+use std::{collections::HashMap, fs, path::PathBuf};
 
 #[get("/")]
-fn default() -> content::Json<String> {
-    let mut dirs = &mut fs::read_dir("./json").unwrap();
-    let mut dirs2 = &mut fs::read_dir("./json").unwrap();
-    let mut json: &mut String = &mut "{'type': 'default', 'classes': [".to_string();
-    for path in dirs.into_iter() {
-        let class = path.unwrap().file_name().to_str().unwrap().to_string();
-        json.push_str(&("'".to_string() + &class[..] + "', "));
-    }// yea yea i know i had 3 hrs to make this chill
-    json.pop();
-    json.pop();
-    if (json.to_string() + ":").contains("::"){
-        json.push_str(" [");
-    }
-    json.push_str("], ");
+fn default() -> Result<JsonValue, JsonValue> {
+    let json_dir = PathBuf::from("json");
 
-    for path in dirs2.into_iter() {
-        let class = path.unwrap().file_name().to_str().unwrap().to_string();
-        json.push_str(&("'".to_string() + &class[..] + "': ["));
+    let classes = fs::read_dir(&json_dir)
+        .expect("Unable to read path")
+        .map(|class_path| {
+            let class_dir = class_path.expect("failed reading path in ./json");
 
-        let pages_raw = fs::read_dir(&("./json/".to_string() + &class[..])).unwrap();
-        for page in pages_raw.into_iter() {
-            json.push_str(&("'".to_string() + &page.unwrap().file_name().to_str().unwrap().to_string().split(".").into_iter().collect::<Vec<&str>>()[0] + "', "));
+            let class_name = class_dir.file_name().to_string_lossy().to_string();
+
+            let mut class_path = json_dir.clone();
+            class_path.push(&class_name);
+
+            if let Ok(meta) = class_dir.metadata() {
+                if !meta.is_dir() {
+                    panic!("{} is not a directory", class_path.to_string_lossy())
+                }
+            }
+
+            let files = fs::read_dir(&class_path)
+                .expect(&format!("Unable to read {}", class_path.to_string_lossy()))
+                .map(|file_path| {
+                    file_path
+                        .expect(&format!("unable to read {}", class_path.to_string_lossy()))
+                        .file_name()
+                        .to_string_lossy()
+                        .to_string()
+                        .replace(".json", "")
+                })
+                .collect::<Vec<_>>();
+
+            (class_name, files)
+        })
+        .collect::<HashMap<_, _>>();
+
+    Ok(json!({
+        "type": "default",
+        "classes": classes
+    }))
+}
+
+#[get("/<class>", rank = 1)]
+fn class(class: String) -> Option<JsonValue> {
+    match fs::read_dir(format!("./json/{}", class)) {
+        Ok(files) => {
+            let pages = files
+                .map(|page| {
+                    page.unwrap()
+                        .file_name()
+                        .to_string_lossy()
+                        .to_string()
+                        .replace(".json", "")
+                })
+                .collect::<Vec<_>>();
+
+            Some(json!({
+                "type": "class",
+                "class-name": class,
+                "pages": pages
+            }))
         }
-        json.pop();
-        json.pop();
-        if (json.to_string() + ":").contains("::"){
-            json.push_str(" [");
-        }
-        json.push_str("], ");
+        Err(_) => None,
     }
-    json.pop();
-    json.pop();
-    json.push_str("}");
-    println!("{}", json);
-    content::Json(json.to_string())
 }
 
-#[get("/<class>")]
-fn class(class: String) -> content::Json<String> {
-    let mut json: &mut String = &mut ("{'type': 'class', 'class-name': '".to_string() + &class[..] + "', 'pages': [");
-    let pages_raw = fs::read_dir(&("./json/".to_string() + &class[..])).unwrap();
-    for page in pages_raw.into_iter() {
-        json.push_str(&("'".to_string() + &page.unwrap().file_name().to_str().unwrap().to_string().split(".").into_iter().collect::<Vec<&str>>()[0] + "', "));
+#[get("/<class>/<name>", rank = 1)]
+fn page(class: String, name: String) -> Option<NamedFile> {
+    let file = NamedFile::open(PathBuf::from(format!("./json/{}/{}.json", class, name)));
+
+    if let Ok(f) = file {
+        Some(f)
+    } else {
+        None
     }
-    json.pop();
-    json.pop();
-    if (json.to_string() + ":").contains("::"){
-        json.push_str(" [");
-    }
-    json.push_str("]}");
-    println!("{}", json);
-    content::Json(json.to_string())
 }
 
-#[get("/<class>/<name>")]
-fn page(class: String, name: String) -> content::Json<String> {
-    content::Json(std::fs::read_to_string(format!("./json/{}/{}.json", class, name)).unwrap())
-}
-
-#[get("/assets/img/<id>")]
+#[get("/img/<id>")]
 fn img(id: String) -> Option<NamedFile> {
-    NamedFile::open(Path::new(&("./img/".to_owned() + &id[..]))).ok()
+    let file = NamedFile::open(PathBuf::from(format!("./img/{}", id)));
+
+    if let Ok(f) = file {
+        Some(f)
+    } else {
+        None
+    }
+}
+
+#[get("/favicon.ico")]
+fn favicon() -> Status {
+    Status::NotFound
 }
 
 fn main() {
@@ -85,7 +116,11 @@ fn main() {
         allowed_headers: AllowedHeaders::some(&["Authorization", "Accept"]),
         allow_credentials: true,
         ..Default::default()
-    }.to_cors();
+    }
+    .to_cors();
 
-    rocket::ignite().mount("/", routes![default, class, page, img]).attach(cors.unwrap()).launch();
+    rocket::ignite()
+        .mount("/", routes![default, class, page, img, favicon])
+        .attach(cors.unwrap())
+        .launch();
 }
