@@ -1,7 +1,7 @@
 let API_URL: string;
 
 if (process.env.NODE_ENV === 'production') {
-    API_URL = "http://localhost:8000/"; // FIXME:
+    API_URL = "https://littletitan.uses-light-the.me/";
 } else {
     API_URL = "http://localhost:8000/";
 }
@@ -157,7 +157,6 @@ async function handler() {
 
             content.style.paddingTop = "1em";
             content.style.paddingBottom = "1em";
-            content.style.height = "100%";
         } else if (obj.type == 'page') {
             //content is wrapper
             content.innerHTML = "";
