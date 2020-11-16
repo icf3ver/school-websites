@@ -32,5 +32,5 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_TOKEN }}
-      - run: docker build --pull --rm -f "backend/Dockerfile" -t ghcr.io/littleTitan/school-websites:latest "backend"
-      - run: docker push ghcr.io/littleTitan/school-websites:latest
+      - run: docker build --pull --rm -f "backend/Dockerfile" -t ghcr.io/littletitan/school-websites:latest "backend"
+      - run: docker push ghcr.io/littletitan/school-websites:latest
