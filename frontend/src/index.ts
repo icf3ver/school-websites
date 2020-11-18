@@ -132,12 +132,6 @@ async function handler() {
             }
             content.innerHTML = "<h1>Main</h1>";
             content.appendChild(wrapper);
-            content.style.paddingRight = "2em";
-            content.style.paddingLeft = "2em";
-
-            content.style.paddingTop = "1em";
-            content.style.paddingBottom = "1em";
-            content.style.height = "100%";
         } else if (obj.type == 'class') {
             let wrapper = document.createElement("ul");
             for (let page of obj.pages) {
@@ -152,11 +146,6 @@ async function handler() {
 
             content.innerHTML = "<h1>" + obj["class-name"].charAt(0).toUpperCase() + obj["class-name"].slice(1) + "</h1>";
             content.appendChild(wrapper);
-            content.style.paddingRight = "2em";
-            content.style.paddingLeft = "2em";
-
-            content.style.paddingTop = "1em";
-            content.style.paddingBottom = "1em";
         } else if (obj.type == 'page') {
             //content is wrapper
             content.innerHTML = "";
@@ -197,7 +186,9 @@ async function handler() {
                         left.style.float = "right";
                         right.appendChild(img);
                         right.style.width = elem.width;
-                        left.style.width = 100 - parseInt(elem.width.substring(0,2)) + "%";
+                        left.style.width = 99 - parseInt(elem.width.substring(0,2)) + "%";
+                        
+                        right.style.paddingLeft = "1%";
 
                         content.appendChild(right);
                         content.appendChild(left);
@@ -206,10 +197,13 @@ async function handler() {
                         left.style.float = "left";
                         left.appendChild(img);
                         left.style.width = elem.width;
-                        right.style.width = 100 - parseInt(elem.width.substring(0,2)) + "%";
+                        right.style.width = 99 - parseInt(elem.width.substring(0,2)) + "%";
+
+                        left.style.paddingRight = "1%";
 
                         content.appendChild(left);
                         content.appendChild(right);
+
                     }
                 }
             }

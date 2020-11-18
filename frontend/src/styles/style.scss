@@ -1,8 +1,13 @@
 
 body{
-    margin: 0px;
     background-image: url("../../img/pexels-roberto-shumski-1903702.jpg");
+    background-origin: padding-box;
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    
+    margin: 0px;
     font-family: 'Alegreya';
 }
 
@@ -24,11 +29,19 @@ body{
 }
 
 #content {
+    background-color: white;
     overflow-y: visible;
     width: 70%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     margin-left: 15%;
     border-radius: 3px;
-    background-color: white;
+}
+
+h4{
+    text-indent: 2em;
 }
 
 .split{
