@@ -1,7 +1,7 @@
 let API_URL: string;
 
 if (process.env.NODE_ENV === 'production') {
-    API_URL = "https://littletitan.uses-light-the.me/";
+    API_URL = "https://api.school-websites.littletitan.org/";
 } else {
     API_URL = "http://localhost:8000/";
 }
