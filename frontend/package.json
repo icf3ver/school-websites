@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url /school-websites/"
+    "build": "parcel build index.html"
   },
   "author": "littleTitan",
   "license": "MIT",
