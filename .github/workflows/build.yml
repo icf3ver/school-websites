@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Install parcel
+        run: npm install --save parcel
+        working-directory: frontend
 
       - name: Run npm build
         run: npm run build
