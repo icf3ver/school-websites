@@ -11,7 +11,11 @@ use rocket::{
 };
 use rocket_contrib::json::JsonValue;
 use rocket_cors::{AllowedHeaders, AllowedOrigins};
-use std::{collections::HashMap, fs, path::PathBuf};
+use std::{collections::HashMap, fs, path::PathBuf, str::FromStr};
+
+use log::{warn, info};
+
+use fs_tree::FileTree;
 
 #[get("/")]
 fn default() -> Result<JsonValue, JsonValue> {
@@ -20,7 +24,7 @@ fn default() -> Result<JsonValue, JsonValue> {
     let classes = fs::read_dir(&json_dir)
         .expect("Unable to read path")
         .map(|class_path| {
-            let class_dir = class_path.expect("failed reading path in ./json");
+            let class_dir = class_path.expect("failed reading path in json");
 
             let class_name = class_dir.file_name().to_string_lossy().to_string();
 
@@ -42,12 +46,10 @@ fn default() -> Result<JsonValue, JsonValue> {
                         .to_string_lossy()
                         .to_string()
                         .replace(".json", "")
-                })
-                .collect::<Vec<_>>();
+                }).collect::<Vec<_>>();
 
             (class_name, files)
-        })
-        .collect::<HashMap<_, _>>();
+        }).collect::<HashMap<_, _>>();
 
     Ok(json!({
         "type": "default",
@@ -57,7 +59,17 @@ fn default() -> Result<JsonValue, JsonValue> {
 
 #[get("/<class>", rank = 1)]
 fn class(class: String) -> Option<JsonValue> {
-    match fs::read_dir(format!("./json/{}", class)) {
+    let path = match PathBuf::from_str(
+        &format!("json/{}", class)
+    ) {
+        Ok(path) => path,
+        Err(e) => {
+            warn!(target: "school-websites-events", "{:?}", e);
+            return None;
+        }
+    };
+
+    match fs::read_dir(path) {
         Ok(files) => {
             let pages = files
                 .map(|page| {
@@ -66,38 +78,58 @@ fn class(class: String) -> Option<JsonValue> {
                         .to_string_lossy()
                         .to_string()
                         .replace(".json", "")
-                })
-                .collect::<Vec<_>>();
-
+                }).collect::<Vec<_>>();
+            
             Some(json!({
                 "type": "class",
                 "class-name": class,
                 "pages": pages
             }))
         }
-        Err(_) => None,
+        Err(e) => {
+            warn!(target: "school-websites-events", "{:?}", e);
+            None
+        }
     }
 }
 
 #[get("/<class>/<name>", rank = 1)]
 fn page(class: String, name: String) -> Option<NamedFile> {
-    let file = NamedFile::open(PathBuf::from(format!("./json/{}/{}.json", class, name)));
+    let path_buf = match PathBuf::from_str(
+        &format!("json/{}/{}.json", class, name)
+    ){
+        Ok(path_buf) => path_buf,
+        Err(e) => {
+            warn!(target: "school-websites-events", "{:?}", e);
+            return None;
+        }
+    };
 
-    if let Ok(f) = file {
-        Some(f)
-    } else {
-        None
+    match NamedFile::open(path_buf) {
+        Ok(file) => Some(file),
+        Err(e) => {
+            warn!(target: "school-websites-events", "Opening webiste err: {:?}", e);
+            None
+        }
     }
 }
 
 #[get("/img/<id>")]
 fn img(id: String) -> Option<NamedFile> {
-    let file = NamedFile::open(PathBuf::from(format!("./img/{}", id)));
+    let path_buf = match PathBuf::from_str(&format!("img/{}", id)) {
+        Ok(path_buf) => path_buf,
+        Err(e) => {
+            warn!(target: "school-websites-events", "{:?}", e);
+            return None;
+        }
+    };
 
-    if let Ok(f) = file {
-        Some(f)
-    } else {
-        None
+    match NamedFile::open(path_buf) {
+        Ok(file) => Some(file),
+        Err(e) => {
+            warn!(target: "school-websites-events", "Opening img err: {:?}", e);
+            None
+        }
     }
 }
 
@@ -109,6 +141,8 @@ fn favicon() -> Status {
 fn main() {
     let allowed_origins = AllowedOrigins::all();
 
+    info!{target: "school-websites-events", "{:?}", FileTree::from_path(PathBuf::from_str("../../../").unwrap())};
+
     // You can also deserialize this
     let cors = rocket_cors::CorsOptions {
         allowed_origins,
@@ -116,8 +150,7 @@ fn main() {
         allowed_headers: AllowedHeaders::some(&["Authorization", "Accept"]),
         allow_credentials: true,
         ..Default::default()
-    }
-    .to_cors();
+    }.to_cors();
 
     rocket::ignite()
         .mount("/", routes![default, class, page, img, favicon])

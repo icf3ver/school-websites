@@ -5,6 +5,13 @@ authors = ["littleTitan <luke.ballmer@outlook.com>"]
 edition = "2021"
 
 [dependencies]
+
 rocket = "0.4.6"
+# Depends on pear_codegen which use compiler internals
+#  REQUIRES Older version of rust nightly
 rocket_cors = "0.5.2"
 rocket_contrib = "0.4.6"
+
+log = "0.4.17"
+
+fs-tree = "*"
