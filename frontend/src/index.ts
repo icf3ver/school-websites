@@ -1,10 +1,13 @@
+let development: boolean = false;
+
 let API_URL: string;
 
-if (process.env.NODE_ENV === 'production') {
-    API_URL = "https://api.school-websites.littletitan.org/";
+if (!development) {
+    API_URL = "http://littletitan.org:8080/";
 } else {
     API_URL = "http://localhost:8000/";
 }
+
 function apiUrl() {
     return API_URL + window.location.hash.substring(1);
 }
