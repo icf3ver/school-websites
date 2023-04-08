@@ -1,0 +1,32 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] About Page",
+    "author": "Luke Ballmer",
+    "elem": [        
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Citations", "link": "%2Fcitations"}
+        ]},
+
+        {"type": "subtitle", "text": "About"},
+        {"type": "text", "text": "In 2021 the number of startups across America exploded. As a result of massive layoffs and remote work in the economy, over COVID, people started hobby projects and new exciting chapters in their lives. This change may not always have been for the better, however. With the massive undersupply of labor, companies underperformed in the following quarters and the entire economy suffered. This issue could have been predicted and may not have had as big of a detrimental impact on everyone had they understood and properly evaluated their decisions to risk it all for the startup world."},
+
+        {"type": "text", "text": "These pages will explore the tribulations and effects of startups as they grow from ideas into companies."},
+
+        {"type": "subtitle", "text": "Getting Started"},
+        {"type": "text", "text": ""},
+        {"type": "subtitle", "text": "Stakeholders"},
+        {"type": "text", "text": ""},
+        {"type": "subtitle", "text": "Defences"},
+        {"type": "text", "text": ""},
+        {"type": "subtitle", "text": "Going Public"},
+        {"type": "text", "text": ""},
+        {"type": "subtitle", "text": "Citations"}
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] Stakeholders Page",
+    "author": "Luke Ballmer",
+    "elem": [
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Citations", "link": "%2Fcitations"}
+        ]},
+
+        {"type": "subtitle", "text": "Stakeholder 1: Society"},
+        {"type": "text", "text": "sectors came a new influx of couriers redistributing the workforce and pitting companies against each other. This raised the price of labor significantly and lowered the skill of a workforce that no longer was legacy to a problem or company structure–that is to say, the workforce was no longer as efficient but was being paid more. Some of the workforce would form other startups, which also led to an increase in the demand for labor and increased the volatility of the entire situation and economy. However, the predatory practices of the new couriers and the excitement of the startup world were not the only worries for society. Many of the startups failed, with most courier companies being doomed after the economy returned to a more stable equilibrium."},
+        
+        {"type": "subtitle", "text": "Stakeholder 2: The Startup Workforce"},
+        {"type": "text", "text": "The founders and employees of the startups are some of the biggest stakeholders in the company. With the success rate of first-time startups being as low as 18%, most of the newcomers to the startup world were in for a rough surprise. According to these metrics, in 2021, 1,286,491 of the 1,568,892 startups failed. Failure, of course, looked different for each stakeholder, but even in the best cases it would sap years of the stakeholder's lives."},
+
+        {"type": "subtitle", "text": "Stakeholder 3: Angel Investors"},
+        {"type": "text", "text": "Investors, by definition, are also monetary and equity stakeholders. They often have the most money on the line, which helps fund a venture's activities. High Tech Startups by John L. Nesheim approaches the concept of angel investors in a very proactive manner. Conventional venture capital funding is often not sufficient or ideal for founders who want to retain a large percentage of the company. Often angel investors can lend a hand. These individuals will stake themselves in companies and provide not only funding but also experience and advise."},
+
+        {"type": "citation", "text": "Nesheim, John L. High tech start up, revised and updated: The complete handbook for creating successful new high tech companies. Simon and Schuster, 2000."},
+        {"type": "citation", "text": "Soota, Ashok, and S. R. Gopalan. Entrepreneurship Simplified: From Idea to IPO. Penguin UK, 2016."}
+    ]
+}

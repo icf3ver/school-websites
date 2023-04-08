@@ -1,0 +1,35 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] Going Public Page",
+    "author": "Luke Ballmer",
+    "elem": [
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Citations", "link": "%2Fcitations"}
+        ]},
+
+        {"type": "subtitle", "text": "The decision to go IPO"},
+        {"type": "text", "text": "The decision to go IPO often made -> Source of cheap capital"},
+        
+        {"type": "subtitle", "text": "Global distribution of IPOs"},
+        {"type": "text", "text": "The IPO decision makes a striking claim that “one can reasonably say that most American firms will choose to go public if given the chance this appears to be the exception to the norm in continental europe” (page 3 The IPO Decision)"},
+        {"type": "text", "text": "To understand this claim consider the following table: "},
+        {"type": "wrapimg", "side": "right", "width": "40%", "name": "the-ipo-decision-table1.png"},
+        {"type": "text", "text": "While in the United States, companies see the decision to go public as an opportunity to raise cheap capital; this is not the case everywhere in the world. The IPO Decision points out that in some companies with less developed markets, companies can not rely on these public exchanges for capital and may instead choose to go public for different reasons."},
+        {"type": "text", "text": "Marian V. Jones and Patricia P. McDougall-Covin, however, make the claim in their paper concerning the globalization of new technology-based firms that globalization is automatic and linked to innovation. From this, an argument can be gleaned that the IPO markets discussed in The IPO Decision may have changed since The IPO Decision was released in 2004."},
+
+        {"type": "subtitle", "text": "Long-term performance:"},
+        {"type": "text", "text": "There is a heated debate about the long-term performance of new companies when they first go public."},
+        {"type": "text", "text": "One side of the debate claims that over a 3 to 5-year period, with the exception of the initial offering, these companies perform poorly. Opponents argue that the market and performance are misspecified and that they don’t underperform for what they are in the proper context. That is to say it is generally agreed that with respect to the greater market IPOs have lower absolute/average returns over a 3 to 5-year period. One way to understand this is that the public is not as aware and informed about these companies, to begin with, and therefore they are undervalued for a time. However, the definition of undervalued is up for debate."},
+
+        {"type": "citation", "text": "Draho, Jason. The IPO decision: Why and how companies go public. Edward Elgar Publishing, 2004."},
+        {"type": "citation", "text": "Onetti, Alberto, et al. \"Internationalization, innovation and entrepreneurship: business models for new technology-based firms.\" Journal of Management & Governance 16 (2012): 337-368."},
+        {"type": "citation", "text": "Soota, Ashok, and S. R. Gopalan. Entrepreneurship Simplified: From Idea to IPO. Penguin UK, 2016."}
+    ]
+}

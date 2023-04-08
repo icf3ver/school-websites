@@ -1,0 +1,24 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] Citations Page",
+    "author": "Luke Ballmer",
+    "elem": [        
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Citations", "link": "%2Fcitations"}
+        ]},
+        {"type": "subtitle", "text": "Citations:"}, 
+        {"type": "citation", "text": "Chesbrough, Henry William. Open innovation: The new imperative for creating and profiting from technology. Harvard Business Press, 2003."},
+        {"type": "citation", "text": "Draho, Jason. The IPO decision: Why and how companies go public. Edward Elgar Publishing, 2004."},
+        {"type": "citation", "text": "Nesheim, John L. High tech start up, revised and updated: The complete handbook for creating successful new high tech companies. Simon and Schuster, 2000."},
+        {"type": "citation", "text": "Onetti, Alberto, et al. \"Internationalization, innovation and entrepreneurship: business models for new technology-based firms.\" Journal of Management & Governance 16 (2012): 337-368."},
+        {"type": "citation", "text": "Soota, Ashok, and S. R. Gopalan. Entrepreneurship Simplified: From Idea to IPO. Penguin UK, 2016."}
+        
+    ]
+}

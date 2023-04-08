@@ -95,7 +95,7 @@ fn class(class: String) -> Option<JsonValue> {
 
 #[get("/<class>/<name>", rank = 1)]
 fn page(class: String, name: String) -> Option<NamedFile> {
-    let path_buf = match PathBuf::from_str(
+    let mut path_buf = match PathBuf::from_str(
         &format!("json/{}/{}.json", class, name)
     ){
         Ok(path_buf) => path_buf,
@@ -104,6 +104,18 @@ fn page(class: String, name: String) -> Option<NamedFile> {
             return None;
         }
     };
+
+    if !path_buf.exists() {
+        path_buf = match PathBuf::from_str(
+            &format!("json/{}/{}/index.json", class, name)
+        ){
+            Ok(path_buf) => path_buf,
+            Err(e) => {
+                warn!(target: "school-websites-events", "{:?}", e);
+                return None;
+            }
+        };
+    }
 
     match NamedFile::open(path_buf) {
         Ok(file) => Some(file),

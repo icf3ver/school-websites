@@ -1,4 +1,4 @@
-let development: boolean = false;
+let development: boolean = true;
 
 let API_URL: string;
 
@@ -10,6 +10,15 @@ if (!development) {
 
 function apiUrl() {
     return API_URL + window.location.hash.substring(1);
+}
+
+interface Navbar{
+    type: "navbar",
+    navelem: (Navelem)[]
+}
+interface Navelem{
+    name: string,
+    link: string,
 }
 
 interface Subtitle{
@@ -34,6 +43,11 @@ interface Wrapimg{
     width: string,
 }
 
+interface Citation{
+    type: "citation",
+    text: string,
+}
+
 interface DefaultResponse {
     type: "default",
     classes: Record<string, string[]>
@@ -49,7 +63,7 @@ interface PageResponse {
     type: "page",
     title: string,
     author: string,
-    elem: (Subtitle | Text | Img | Wrapimg)[]
+    elem: (Navbar | Subtitle | Text | Img | Wrapimg | Citation)[]
 }
 
 type ResponseJson = DefaultResponse | ClassResponse | PageResponse;
@@ -58,6 +72,8 @@ window.addEventListener("load", handler);
 window.addEventListener("hashchange", handler, false);
 
 async function handler() {
+    let root_url = window.location.hash.split("%2F")[0];
+
     let content = document.getElementById("content");
     let menu = document.getElementById("menu");
 
@@ -163,7 +179,27 @@ async function handler() {
             content.appendChild(author);
 
             for (let elem of obj.elem) {
-                if (elem.type == "subtitle") {
+                if (elem.type == "navbar") {
+                    let navbar = document.createElement("div");
+                    navbar.className = "navbar";
+                    let is_first = true;
+                    for (let navelem of elem.navelem) {
+                        let navelem_container = document.createElement("div");
+                        if (!is_first) {
+                            let spacer = document.createElement("div");
+                            spacer.innerText = " | ";
+                            spacer.className = "navelem-spacer";
+                            navbar.appendChild(spacer);
+                        }
+                        let link = document.createElement("a");
+                        link.className = "navelem";
+                        link.innerText = navelem.name;
+                        link.href = root_url + navelem.link;
+                        navbar.appendChild(link);
+                        is_first = false;
+                    }
+                    content.appendChild(navbar);
+                } else if (elem.type == "subtitle") {
                     let subtitle = document.createElement("h3");
                     subtitle.innerText = elem.text;
                     content.appendChild(subtitle);
@@ -208,6 +244,11 @@ async function handler() {
                         content.appendChild(right);
 
                     }
+                } else if (elem.type == "citation") {
+                    let citation = document.createElement("p");
+                    citation.className = "citation"
+                    citation.innerText = elem.text;
+                    content.appendChild(citation);
                 }
             }
         }

@@ -1,0 +1,25 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] Definitions Page",
+    "author": "Luke Ballmer",
+    "elem": [
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Citations", "link": "%2Fcitations"}
+        ]},
+
+        {"type": "subtitle", "text": "Definitions"},
+        
+        {"type": "text", "text": "IPO = The first time a company lists its shares on a public stock exchange."},
+        {"type": "text", "text": "Angel investors = Investors that invest in startups and advise them"},
+        {"type": "text", "text": "Underwriters = Investment banks that mitigate trading"},
+        {"type": "text", "text": "Issuers = The company issuing the shares"},
+        {"type": "text", "text": "Backholder = An investor who has the ability to take action and ensure proper management"}
+    ]
+}

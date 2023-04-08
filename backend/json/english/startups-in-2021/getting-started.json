@@ -1,0 +1,33 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] Getting Started Page",
+    "author": "Luke Ballmer",
+    "elem": [
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Citations", "link": "%2Fcitations"}
+        ]},
+
+        {"type": "subtitle", "text": "Getting Started"},
+        {"type": "text", "text": "Getting started with the question: Should you go IPO?"},
+
+        {"type": "subtitle", "text": "What does it mean to go public?"},
+        {"type": "text", "text": "Going public means to list your shares on a public exchange. This entails a few important things. The issuer of the shares (i.e., the company) will no longer know its investors. Rather than receiving money directly from your investors the transactions now will be mitigated by investment banks. The Investors will also no longer have the same insight into the company. Insider Trading, for instance, only applies to publicly traded companies. For private companies, the concept of Insider Trading does not exist."},
+
+        {"type": "subtitle", "text": "The question you should be asking yourself:"},
+        {"type": "text", "text": "According to Jason Draho you should be asking yourself, ”how should the IPO sale occur given the reality of the new issues{@see definitions page} market?”(5). The book states that the “optimal selling mechanism”(5) depends on the specific group. Underwriters (i.e. The Investment banks) {definition link} are interested in profit maximization, their interests therefore are not aligned with those of regulators (i.e. the SEC or Securities and Exchange Commission). In the year 2000, an IPO bubble burst and exposed some of the illegal activities underwriters were performing to maximize their profits. One example of this was undervaluing shares to maximize their margins. The most famous example, however, was false recommendations by analysts who did not believe in companies but wanted the goodwill of the underwriters."},
+        
+        {"type": "subtitle", "text": "Market Timing"},
+        {"type": "text", "text": "According to the IPO decision, the market operates on a cycle. As a company, you do best to jump in when the public’s opinion of the company is at an all-time high. Two strategies exist to arrive at that goal. One option is to allow the public to understand the quality of your goods. The other is to signal quality through bold action such as money-back guarantees or guarantees of satisfaction. Going public forces a company to care about its reputation."},
+        {"type": "text", "text": "Market Visibility is also a factor, however. The juxtaposition of this with conventional quality assurance can be described through the famous saying in marketing: “Any advertising is good advertising.” Public recognition of the product can be understood to be a sign of quality and a calling for investors."},
+
+        {"type": "citation", "text": "Draho, Jason. The IPO decision: Why and how companies go public. Edward Elgar Publishing, 2004."},
+        {"type": "citation", "text": "Soota, Ashok, and S. R. Gopalan. Entrepreneurship Simplified: From Idea to IPO. Penguin UK, 2016."}
+    ]
+}

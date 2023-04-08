@@ -1,0 +1,35 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] Defences Page",
+    "author": "Luke Ballmer",
+    "elem": [
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Citations", "link": "%2Fcitations"}
+        ]},
+
+        {"type": "subtitle", "text": "Defences"},
+        {"type": "text", "text": "How to protect the company?"},
+
+        {"type": "subtitle", "text": "Monitoring"},
+        {"type": "text", "text": "When a company goes IPO, an important concept to uphold is that investors must have the power to take action when management fails. The difference between public and private companies is the number of “backholders”{link}. In a public company, large shareholders outside of management have an incentive to undergo what The IPO Decision deems as the costly process of monitoring the firm. There are many ways in which monitoring may become too costly, even for the big players, and market errors may arise. Monitoring, for the most part, entails the indirect extrapolation of managerial decisions, inefficiencies and failures."},
+
+        {"type": "subtitle", "text": "Aligning Incentives"},
+        {"type": "text", "text": "to minimize the costs of monitoring, there are multiple methods of aligning the incentives of management and shareholders. CEOs often generate most of their compensation through capital gains on the 20-so-percent ownership they have held since the inception of the company. Other founders owning in the range of %10 to %15 of the company do not often sell their shares and instead receive options (the option to buy back their shares at the initial price and thus make the margin). This is generalized by the IPO Decision on page 101 under the term Total Compensation."},
+        {"type": "text", "text": "The price of the CEO’s salary is tailored to the alignment of the CEO with the shareholders through monitoring. And, of course, these should tie the CEO’s compensation together with the performance of the company."},
+        
+        {"type": "subtitle", "text": "Anti Takeover Provisions (ATPs)"},
+        {"type": "text", "text": "Sometimes it is possible that the incentives of a particular shareholder may not be aligned with the founders. Anti Takeover provisions help secure a company against takeovers by individual bad actors."},
+        {"type": "text", "text": "Anti Takeover provisions are not meant to limit the power of backholders{link} and instead act only against the individuals whose incentives do not pertain to the success of the company and therefore are not aligned with the rest of the stakeholders."},
+        {"type": "text", "text": "Some examples of ATPs are listed below:"},
+        {"type": "img", "name": "the-ipo-decision-table2.png"},
+
+        {"type": "citation", "text": "Draho, Jason. The IPO decision: Why and how companies go public. Edward Elgar Publishing, 2004."}
+    ]
+}

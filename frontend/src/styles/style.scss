@@ -37,6 +37,11 @@ body{
     padding-right: 2em;
     margin-left: 15%;
     border-radius: 3px;
+
+    /* Clearfix hack */
+    content: "";
+    clear: both;
+    display: table;
 }
 
 h4{
@@ -49,3 +54,27 @@ h4{
 }
 ul ul { display: none }
 ul li:hover ul { display: block; }
+
+.navbar{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+.navelem{
+    display: inline;
+}
+.navelem-spacer{
+    display: inline;
+}
+
+.citation{
+    font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; 
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    text-indent: -36px;
+    padding-left: 36px;
+}
