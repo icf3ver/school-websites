@@ -1,0 +1,33 @@
+{
+    "type": "page",
+    "title": "[Startups in 2021] Further Reading Page",
+    "author": "Luke Ballmer",
+    "elem": [
+        {"type": "img", "name": "startup-shell.svg"},
+        {"type": "navbar", "navelem": [
+            {"name": "About", "link": ""},
+            {"name": "Stakeholders", "link": "%2Fstakeholders"},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
+            {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Definitions", "link": "%2Fdefinitions"},
+            {"name": "Further Reading", "link": "%2Ffurther-reading"}
+        ]},
+        {"type": "subtitle", "text": "Further Reading:"}, 
+        
+        {"type": "citation", "text": "Chesbrough, Henry William. Open innovation: The new imperative for creating and profiting from technology. Harvard Business Press, 2003."},
+        {"type": "text", "text": "Open innovation was released in the year 2003 and is a great book that tries to understand innovation and help answer the question of what startups are worth building companies around. It's a novel approach to a novel question, and although it may not be as practical as the rest it was still very fun to read."},
+        
+        {"type": "citation", "text": "Draho, Jason. The IPO decision: Why and how companies go public. Edward Elgar Publishing, 2004."},
+        {"type": "text", "text": "This is an excellent book that goes into the intrinsic operations of the market with respect to public companies. The author presents his research on the IPO market and how public exchanges are structured and should be interacted with and why. This book aligns itself with the investors more so than founders as it focuses on the IPO stages of a company where management links its incentives with those of the founders."},
+        
+        {"type": "citation", "text": "Nesheim, John L. High tech start up, revised and updated: The complete handbook for creating successful new high tech companies. Simon and Schuster, 2000."},
+        {"type": "text", "text": "This book provides a very practical and descriptive approach to entrepreneurship for high tech start ups. It is the most comprehensive guide I found to tech entrepreneurship released in the twenty-first century. It also seeks to understand why the startup world is as exclusive as it is."},
+        
+        {"type": "citation", "text": "Onetti, Alberto, et al. \"Internationalization, innovation and entrepreneurship: business models for new technology-based firms.\" Journal of Management & Governance 16 (2012): 337-368."},
+        {"type": "text", "text": "This paper provides a very brief insight into globalization for startups. This was an interesting topic for my research and kept showing up in the older literature. I chose this as a relatively more recent peek into the more modern startup world and for the consensus reached by the researchers."},
+        
+        {"type": "citation", "text": "Soota, Ashok, and S. R. Gopalan. Entrepreneurship Simplified: From Idea to IPO. Penguin UK, 2016."},
+        {"type": "text", "text": "This paper provides a simplified version of the High tech startup handbook and explains entrepreneurship in layman's terms. The book included a complete thought provoking look at entrepreneurship as a whole. It helped build up an intuition that I found useful when reading through the other sources."}
+    ]
+}

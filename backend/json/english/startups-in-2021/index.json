@@ -2,31 +2,35 @@
     "type": "page",
     "title": "[Startups in 2021] About Page",
     "author": "Luke Ballmer",
-    "elem": [        
+    "elem": [
         {"type": "img", "name": "startup-shell.svg"},
         {"type": "navbar", "navelem": [
             {"name": "About", "link": ""},
-            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Stakeholders", "link": "%2Fstakeholders"},
-            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Defences", "link": "%2Fdefences"},
             {"name": "Definitions", "link": "%2Fdefinitions"},
-            {"name": "Citations", "link": "%2Fcitations"}
+            {"name": "Further Reading", "link": "%2Ffurther-reading"}
         ]},
 
         {"type": "subtitle", "text": "About"},
         {"type": "text", "text": "In 2021 the number of startups across America exploded. As a result of massive layoffs and remote work in the economy, over COVID, people started hobby projects and new exciting chapters in their lives. This change may not always have been for the better, however. With the massive undersupply of labor, companies underperformed in the following quarters and the entire economy suffered. This issue could have been predicted and may not have had as big of a detrimental impact on everyone had they understood and properly evaluated their decisions to risk it all for the startup world."},
 
-        {"type": "text", "text": "These pages will explore the tribulations and effects of startups as they grow from ideas into companies."},
+        {"type": "text", "text": "This forum is broken up into three pages. The first page, the stakeholders page, describes each stakeholder. The following three pages are the Position pages and describe the positions your startup must move through as it goes from an idea to a publicly traded company. These pages will explore the tribulations and effects of startups as they grow from ideas into companies. The definitions for any technical terms can be found on the definitions page; the source material can be found on the further reading page."},
+
+        {"type": "text", "text": "The three stakeholders to keep in mind are"}, 
+        {"type": "text", "text": " 1) Your family and friends"},
+        {"type": "text", "text": " 2) you and your fellow founders"},
+        {"type": "text", "text": " 3) Your investors and shareholders"},
+
+        {"type": "subtitle", "text": "Position Pages:  These are a few Positions you need to move your startup through. The main stakeholders for each position changes as you move through them."},
 
         {"type": "subtitle", "text": "Getting Started"},
-        {"type": "text", "text": ""},
-        {"type": "subtitle", "text": "Stakeholders"},
-        {"type": "text", "text": ""},
-        {"type": "subtitle", "text": "Defences"},
-        {"type": "text", "text": ""},
+        {"type": "text", "text": "When you are first getting started you are building an idea from the ground up. Here the main stakeholders are your friends and family who want to see you succeed."},
         {"type": "subtitle", "text": "Going Public"},
-        {"type": "text", "text": ""},
-        {"type": "subtitle", "text": "Citations"}
+        {"type": "text", "text": "You and your fellow founders are likely the majority shareholders and stakeholders in the company at this position."},
+        {"type": "subtitle", "text": "Defences"},
+        {"type": "text", "text": "At this position founders may have converted some of their shares to options or sold them off. The main stakeholders are now the majority shareholders. To ensure the success of the company it is necessary to put some checks in place to ensure all shareholders behave in a way that is beneficial to the company."}
     ]
 }

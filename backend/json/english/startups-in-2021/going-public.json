@@ -6,21 +6,21 @@
         {"type": "img", "name": "startup-shell.svg"},
         {"type": "navbar", "navelem": [
             {"name": "About", "link": ""},
-            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Stakeholders", "link": "%2Fstakeholders"},
-            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Defences", "link": "%2Fdefences"},
             {"name": "Definitions", "link": "%2Fdefinitions"},
-            {"name": "Citations", "link": "%2Fcitations"}
+            {"name": "Further Reading", "link": "%2Ffurther-reading"}
         ]},
 
         {"type": "subtitle", "text": "The decision to go IPO"},
-        {"type": "text", "text": "The decision to go IPO often made -> Source of cheap capital"},
+        {"type": "text", "text": "The decision to go IPO is often made by the founders to generate capital for the future of the company. At this point the founders likely are the majority shareholders and also the majority stakeholders."},
         
         {"type": "subtitle", "text": "Global distribution of IPOs"},
         {"type": "text", "text": "The IPO decision makes a striking claim that “one can reasonably say that most American firms will choose to go public if given the chance this appears to be the exception to the norm in continental europe” (page 3 The IPO Decision)"},
-        {"type": "text", "text": "To understand this claim consider the following table: "},
         {"type": "wrapimg", "side": "right", "width": "40%", "name": "the-ipo-decision-table1.png"},
+        {"type": "text", "text": "To understand this claim consider the following table: "},
         {"type": "text", "text": "While in the United States, companies see the decision to go public as an opportunity to raise cheap capital; this is not the case everywhere in the world. The IPO Decision points out that in some companies with less developed markets, companies can not rely on these public exchanges for capital and may instead choose to go public for different reasons."},
         {"type": "text", "text": "Marian V. Jones and Patricia P. McDougall-Covin, however, make the claim in their paper concerning the globalization of new technology-based firms that globalization is automatic and linked to innovation. From this, an argument can be gleaned that the IPO markets discussed in The IPO Decision may have changed since The IPO Decision was released in 2004."},
 

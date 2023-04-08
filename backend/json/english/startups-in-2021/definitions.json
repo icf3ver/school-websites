@@ -6,17 +6,18 @@
         {"type": "img", "name": "startup-shell.svg"},
         {"type": "navbar", "navelem": [
             {"name": "About", "link": ""},
-            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Stakeholders", "link": "%2Fstakeholders"},
-            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Defences", "link": "%2Fdefences"},
             {"name": "Definitions", "link": "%2Fdefinitions"},
-            {"name": "Citations", "link": "%2Fcitations"}
+            {"name": "Further Reading", "link": "%2Ffurther-reading"}
         ]},
 
         {"type": "subtitle", "text": "Definitions"},
         
         {"type": "text", "text": "IPO = The first time a company lists its shares on a public stock exchange."},
+        {"type": "text", "text": "Equity = A percentage of a company owned by an person or thing"},
         {"type": "text", "text": "Angel investors = Investors that invest in startups and advise them"},
         {"type": "text", "text": "Underwriters = Investment banks that mitigate trading"},
         {"type": "text", "text": "Issuers = The company issuing the shares"},

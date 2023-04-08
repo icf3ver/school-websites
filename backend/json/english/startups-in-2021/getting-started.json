@@ -6,16 +6,23 @@
         {"type": "img", "name": "startup-shell.svg"},
         {"type": "navbar", "navelem": [
             {"name": "About", "link": ""},
-            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Stakeholders", "link": "%2Fstakeholders"},
-            {"name": "Defences", "link": "%2Fdefences"},
+            {"name": "Getting Started", "link": "%2Fgetting-started"},
             {"name": "Going Public", "link": "%2Fgoing-public"},
+            {"name": "Defences", "link": "%2Fdefences"},
             {"name": "Definitions", "link": "%2Fdefinitions"},
-            {"name": "Citations", "link": "%2Fcitations"}
+            {"name": "Further Reading", "link": "%2Ffurther-reading"}
         ]},
 
         {"type": "subtitle", "text": "Getting Started"},
-        {"type": "text", "text": "Getting started with the question: Should you go IPO?"},
+        {"type": "text", "text": "When you are first getting a company off the ground, the majority stakeholders are not you or your friends, who, as entrepreneurs, likely have a high tolerance for ambiguity. The people at this point in the startup's life who are your biggest stakeholders are your family and friends, who want to see you succeed but may not understand your business or market."},
+
+        {"type": "wrapimg", "side": "left", "width": "40%", "name": "high-tech-startup-table1.png"},
+
+        {"type": "subtitle", "text": "Idea to Company"},
+        {"type": "text", "text": "The process of forming a company is very well laid out in almost every source. Generally the steps are as follows: Build a vision, build a team, build a network, and then build a company. A more detailed approach can be seen to the left in a table I pulled from John L. Nesheim’s High tech start up guide."},
+
+        {"type": "subtitle", "text": "Getting started with the question: Should you go IPO?"},
 
         {"type": "subtitle", "text": "What does it mean to go public?"},
         {"type": "text", "text": "Going public means to list your shares on a public exchange. This entails a few important things. The issuer of the shares (i.e., the company) will no longer know its investors. Rather than receiving money directly from your investors the transactions now will be mitigated by investment banks. The Investors will also no longer have the same insight into the company. Insider Trading, for instance, only applies to publicly traded companies. For private companies, the concept of Insider Trading does not exist."},
@@ -28,6 +35,7 @@
         {"type": "text", "text": "Market Visibility is also a factor, however. The juxtaposition of this with conventional quality assurance can be described through the famous saying in marketing: “Any advertising is good advertising.” Public recognition of the product can be understood to be a sign of quality and a calling for investors."},
 
         {"type": "citation", "text": "Draho, Jason. The IPO decision: Why and how companies go public. Edward Elgar Publishing, 2004."},
+        {"type": "citation", "text": "Nesheim, John L. High tech start up, revised and updated: The complete handbook for creating successful new high tech companies. Simon and Schuster, 2000."},
         {"type": "citation", "text": "Soota, Ashok, and S. R. Gopalan. Entrepreneurship Simplified: From Idea to IPO. Penguin UK, 2016."}
     ]
 }
