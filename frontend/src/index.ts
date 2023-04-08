@@ -1,4 +1,4 @@
-let development: boolean = true;
+let development: boolean = false;
 
 let API_URL: string;
 
